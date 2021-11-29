@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<form action="/action_page.php" method="get">
+  Pick a number between 2 and 5: <input type="number" id="myInput" name="quantity" min="2" max="5">
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you submit the form with a number that is less than 2 or greater than 5,
+an alert message will occur.</p>
+
+<p><strong>Note:</strong> The oninvalid event is not supported in Internet Explorer 9 and earlier or Safari.</p>
+
+<script>
+document.getElementById("myInput").addEventListener("invalid", myFunction);
+
+function myFunction() {
+    alert("You must pick a number between 2 and 5. You chose: " + this.value);
+}
+</script>
+
+</body>
+</html>

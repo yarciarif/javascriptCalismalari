@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+<script>
+function onayla(){
+alert("Mesajın Gönderildi");
+}
+function temizle(){
+return confirm(Form temizlensin mi?);
+}
+</script>
+
+<form>
+<fieldset>
+<legend>Mesaj Gönder</legend><br><br>
+<label>Rumuzunuz:        </label><input type="text"></input><br><br>
+<label>e-Posta adresiniz:</label><input type="text"></input><br><br>
+<label>Dogum Tarihiniz:  </label><input type="text"></input><br><br>
+<label>Mesajınız:        </label><textarea rows="2"; cols="28";></textarea><br><br>
+<input type="Submit" value="Onayla" onclick="Onayla()"></input><br><br>
+<input type="Submit" value="Formu Temizle" onclick="return temizle()"></input>
+
+</fieldset>
+</form>
+<p style="color:red;">onfocus ve onblur olayları da vardır fakat pek kullanılmazlar..</p>
+</head>
+</html>

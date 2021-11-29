@@ -1,0 +1,23 @@
+<html>
+<body>
+<!-- kontrol etme özelliği -->
+<p>Press the "A" key on the keyboard in the input field to alert some text.</p>
+
+<input type="text" size="40" onkeydown="myFunction(event)">
+
+<p><strong>Note:</strong> The key property is not supported in Safari or IE 8 and earler versions.</p>
+
+<script>
+function myFunction(event) {
+    var x = event.key;
+
+    // If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
+       
+    if (x == "a" || x == "A") { 
+        alert ("You pressed the 'A' key!");
+    }
+}
+</script>
+
+</body>
+</html>

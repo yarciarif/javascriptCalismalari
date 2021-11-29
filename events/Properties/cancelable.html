@@ -1,0 +1,18 @@
+<html>
+<body>
+<!-- ne işe yarıyorr bu -->
+<p>Click the button to find out if the onclick event is a cancelable event.</p>
+
+<button onclick="myFunction(event)">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) { 
+    var x = event.cancelable;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

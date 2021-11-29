@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<p>You can use an array to display the name of the weekday:</p>
+<button type="button" class="btn btn-danger">Gün</button>
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+document.getElementById("demo").innerHTML = days[d.getDay()];
+</script>
+
+</body>
+</html>

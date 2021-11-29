@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p>Click the button to display the date and time as a string, using the ISO standard.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var d = new Date();
+    var n = d.toISOString();
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>

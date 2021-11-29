@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<a id="myAnchor" href="https://www.w3schools.com">A Link: Go to w3schools.com</a>
+
+<p id="demo">Click the button to remove the href attribute node from the a element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var elmnt = document.getElementById("myAnchor");
+    var attr = elmnt.getAttributeNode("href");
+    elmnt.removeAttributeNode(attr);
+}
+</script>
+
+</body>
+</html>

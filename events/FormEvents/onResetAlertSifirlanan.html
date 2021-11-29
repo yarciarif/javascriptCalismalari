@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p>Write something in the text field and press the Reset button.</p>
+
+<form onreset="myFunction()">
+  <input type="text" id="myInput">
+  <input type="reset">
+</form>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput");
+    alert("Before reset, the text was: " + x.value);
+}
+</script>
+
+</body>
+</html>

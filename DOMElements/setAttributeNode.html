@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+.democlass {
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>Hello World</h1>
+
+<p>Click the button to set the class attribute node of the header above.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var attr = document.createAttribute("class");
+    attr.value = "democlass";
+    var h = document.getElementsByTagName("H1")[0];
+    h.setAttributeNode(attr); 
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<script id="myFirstScript">
+document.write("Hello World!");
+</script>
+
+<p>Click the button to display the id of each script element in the document.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script id="mySecondScript">
+function myFunction() {
+    var x = document.scripts;
+    var txt = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+        txt = txt +  x[i].id + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

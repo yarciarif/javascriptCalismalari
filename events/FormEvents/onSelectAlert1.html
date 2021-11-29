@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<input type="text" id="myText" value="Some text.." onselect="myAlertFunction()">
+
+<p>Click the button to select the contents of the text field.</p>
+
+<button type="button" onclick="mySelectFunction()">Select content</button>
+
+<p>The select() method of the HTML DOM Input Text Object selects the contents of the text field. When this happens, the onselect event fires, which will trigger the alert function.</p>
+
+<script>
+// Select the contents of a text field with id="myText"
+function mySelectFunction() {
+    document.getElementById("myText").select();
+}
+
+// Alert some text when the text in the text field has been selected
+function myAlertFunction() {
+    alert("You selected some text!");
+}
+</script>
+
+</body>
+</html>

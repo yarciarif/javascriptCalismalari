@@ -1,0 +1,20 @@
+<html>
+<body>
+<!-- bi bakılmalıı-->
+<a id="myAnchor">A Link: Go to w3schools.com</a>
+
+<p>Click the button to create a "class" attribute with the value "www.w3schools.com" and insert it to the a element above.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var anchor = document.getElementById("myAnchor");
+    var att = document.createAttribute("href");
+    att.value = "https://www.w3schools.com";
+    anchor.setAttributeNode(att);
+}
+</script>
+
+</body>
+</html>

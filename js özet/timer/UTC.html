@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<p>Click the button to display the numbers of milliseconds between a specified date and midnight January 1, 1970.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var d = Date.UTC(2012, 02, 30);
+    document.getElementById("demo").innerHTML = d;
+}
+</script>
+
+</body>
+</html>

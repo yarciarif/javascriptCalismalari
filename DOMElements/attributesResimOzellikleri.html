@@ -1,0 +1,25 @@
+<html>
+<body>
+<!-- resmin jsonu gibi bi şey heralde -->
+<img id="myImg" alt="Flower" src="klematis.jpg" width="150" height="113">
+
+<p>Click the button to display each attribute's name and value of the image above.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myImg");
+    var txt = "";
+    var i;
+    for (i = 0; i < x.attributes.length; i++) {
+        txt = txt + x.attributes[i].name + " = " + x.attributes[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

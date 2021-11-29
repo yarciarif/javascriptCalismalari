@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<p>Click the button to open an output stream, add some text, and close the output stream.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    document.open("text/html", "replace");
+    document.write("<html><body><p>Hello World!</p></body></html>");
+    document.close();
+}
+</script>
+
+</body>
+</html>

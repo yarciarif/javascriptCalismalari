@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery ile Geri Sayım</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    //saat değerlerini girmek için
+    for(i=1;i<25;i++){
+        $("#saat").append('<option value="'+i+'">'+i+'</option>');
+    }
+    for(i=1;i<61;i++){
+        //dakika değerleri için
+        $("#dakika").append('<option value="'+i+'">'+i+'</option>');
+        //saniye değerleri için
+        $("#saniye").append('<option value="'+i+'">'+i+'</option>');
+    }
+}); 
+ 
+function sayac(){
+    //kullanıcının seçtiği değerlerin alınması
+    var saniye=$("#saniye").val();
+    var dakika=$("#dakika").val()*60;
+    var saat=$("#saat").val()*3600;
+    var toplam=parseInt(saat)+parseInt(dakika)+parseInt(saniye);
+    //geri sayma fonksiyonuna gönder
+    gerisay(toplam);
+    //geriye saniye sayma fonksiyonuna gönder
+    saniyesay(toplam);
+}
+ 
+//geri sayma fonksiyonu
+function gerisay(a){
+    if(a>0){
+        //ekranı temizle
+        $("#zaman_giris").html('');
+        //saniyede bir kez fonksiyonu çalıştır
+        var yenile=setInterval(function(){
+            a--;
+            if(a>=3600){
+                saat=Math.floor(a/3600);
+                dakika=Math.floor((a%3600)/60);
+                saniye=(a%3600)%60;
+                sonuc=saat+' saat '+dakika+' dakika '+saniye+' saniye kaldı';
+                $("#sayac").html(sonuc);
+            }else if(a>=60){
+                dakika=Math.floor(a/60);
+                saniye=a%60;
+                sonuc=dakika+' dakika '+saniye+' saniye kaldı';
+                $("#sayac").html(sonuc);
+            }else if(a>=0){
+                sonuc=a+' saniye kaldı';
+                $("#sayac").html(sonuc);
+            }else{
+                $("#sayac").html('Süre Bitti...');
+                //sıfır (0) olunca dur
+                if(a==0){
+                    clearInterval(yenile);
+                }
+            }
+        }, 1000);
+    }
+}
+ 
+//geri saniye olarak sayma fonksiyonu
+function saniyesay(a){
+    if(a>0){
+        //ekranı temizle
+        $("#zaman_giris").html('');
+        //saniyede bir kez fonksiyonu çalıştır
+        var yenile=setInterval(function(){
+            a--;
+            $("#kalan").html(a+' saniye kaldı');
+            //sıfır (0) olunca dur
+            if(a==0){
+                clearInterval(yenile);
+            }
+        }, 1000);
+    }
+}
+</script>
+<style>
+#kalan {text-align: center; margin-top: 150px; font-size: 72px}
+#sayac {text-align: center; font-size: 48px; margin-top: 40px}
+</style>
+</head>
+<body>
+<div id="zaman_giris">
+Saat:
+<select id="saat">
+    <option value="0">0</option>
+</select>
+Dakika:
+<select id="dakika">
+    <option value="0">0</option>
+</select>
+Saniye:
+<select id="saniye">
+    <option value="0">0</option>
+</select>
+<input type="button" value="Geri Say" onclick="sayac()" />
+</div>
+<div id="kalan"></div>
+<div id="sayac"></div>
+</body>
+</html>

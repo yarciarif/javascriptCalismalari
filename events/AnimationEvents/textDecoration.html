@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+<!-- solid
+	 initial
+	 double
+	 dashed
+	 dotted
+	 wavy
+	 inherit
+-->
+#myP {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<p id="myP">
+Hello world!
+</p>
+
+<p>Click the "Try it" button to change the text-decoration-style of the paragraph.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    document.getElementById("myP").style.MozTextDecorationStyle = "wavy"; // Code for Firefox
+    document.getElementById("myP").style.textDecorationStyle = "wavy";
+}
+</script>
+
+<p><b>Note:</b> The textDecorationStyle property is not supported in any of the major browsers.</p>
+<p><b>Note:</b> Firefox supports an alternative, the MozTextDecorationStyle property.</p>
+
+</body>
+</html>

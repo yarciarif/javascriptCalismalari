@@ -1,0 +1,28 @@
+<html>
+<head>
+<style>
+div {
+    border: 1px solid black;
+    margin: 15px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to get the node name of the DIV's last child node.</p>
+
+<div id="myDIV"><p>A P element - First child in div</p><span>A Span element - Last child in div</span></div>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var list = document.getElementById("myDIV").lastChild.nodeName;
+    document.getElementById("demo").innerHTML = list; 
+}
+</script>
+
+</body>
+</html>

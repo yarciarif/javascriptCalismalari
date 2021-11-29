@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+#myDIV {
+    height: 250px;
+    width: 250px;
+    overflow: auto;
+    background: green;
+}
+
+#content {
+    margin:500px;
+    height: 800px;
+    width: 2000px;
+    background-color: coral;
+    position: relative;
+}
+</style>
+</head>
+<body>
+
+<p>Click the buttons to scroll to the top or to the bottom of the element with id="content".</p>
+
+<button onclick="scrollToTop()">Scroll to the top of the element</button>
+<button onclick="scrollToBottom()">Scroll to the bottom of the element</button>
+
+<div id="myDIV">
+  <div id="content">
+    <div style="position:absolute;top:0;">Some text at the top</div>
+    <div style="position:absolute;bottom:0">Some text at the bottom</div>
+  </div>
+</div>
+
+<script>
+var elmnt = document.getElementById("content");
+
+function scrollToTop() {
+    elmnt.scrollIntoView(true); // Top
+}
+
+function scrollToBottom() {
+    elmnt.scrollIntoView(false); // Bottom
+}
+</script>
+
+</body>
+</html>

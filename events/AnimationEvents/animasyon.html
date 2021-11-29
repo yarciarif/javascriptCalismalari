@@ -1,0 +1,50 @@
+<html>
+<head>
+<!-- ease
+	 ease-in
+	 ease-out
+	 ease-in-out
+	 cubic-bezier
+	 initial
+	 inherit
+-->
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    animation: mymove 2s infinite;
+    -webkit-animation: mymove 2s infinite;  /* Chrome, Safari, Opera */
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to change the timing-function of the animation:</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+   
+   document.getElementById("myDIV").style.animationTimingFunction = "linear";
+}
+</script>
+
+<p><strong>Note:</strong> The animationTimingFunction property is not supported in 
+Internet Explorer.</p>
+<div id="myDIV"></div>
+
+</body>
+</html>

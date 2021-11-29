@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<form action="/action_page.php" method="get">
+  Name: <input type="text" id="myInput" name="fname" pattern=".{6,}">
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you submit the form with less than 6 characters, an alert message will occur.</p>
+
+<p><strong>Note:</strong> The oninvalid event is not supported in Internet Explorer 9 and earlier or Safari.</p>
+
+<script>
+document.getElementById("myInput").addEventListener("invalid", myFunction);
+
+function myFunction() {
+    alert("Must contain 6 or more characters");
+}
+</script>
+
+</body>
+</html>

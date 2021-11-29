@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+div {
+    border: 1px solid black;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to find out how many children the div element below has.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <p>First p element (index 0)</p>
+  <p>Second p element (index 1)</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var c = document.getElementById("myDIV").children.length;
+    document.getElementById("demo").innerHTML = c;
+}
+</script>
+
+</body>
+</html>

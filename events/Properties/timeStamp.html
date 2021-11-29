@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<p onclick="myFunction(event)">Click this paragraph to get the number of milliseconds since midnight of January 1, 1970.</p>
+
+<p>Timestamp: <span id="demo"></span></p>
+
+<script>
+function myFunction(event) {
+    var n = event.timeStamp;
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>

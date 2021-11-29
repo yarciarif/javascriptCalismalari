@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p>Click the button to display the primitive value of a date object.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var d = new Date();
+    var n = d.valueOf();
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body onmousedown="isKeyPressed(event)">
+<!-- ctrl meta shift key gibi farkları da vardır -->
+<p>Click somewhere in the document. An alert box will tell you if the ALT key was pressed when the onmousedown event occured.</p>
+
+<p><strong>Tip:</strong> Try to press and hold down the ALT key (on your keyboard) before you click in the document.</p>
+
+<script>
+function isKeyPressed(event) {
+    if (event.altKey) {
+        alert("The ALT key was pressed!");
+    } else {
+        alert("The ALT key was NOT pressed!");
+    }
+}
+</script>
+
+</body>
+</html>
